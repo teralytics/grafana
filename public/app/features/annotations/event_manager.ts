@@ -48,7 +48,7 @@ export class EventManager {
   }
 
   editEvent(event: AnnotationEvent, elem?: any) {
-    event.tags = []
+    event.tags = [];
     this.event = event;
     this.panelCtrl.render();
   }
