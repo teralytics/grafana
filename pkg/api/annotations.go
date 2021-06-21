@@ -57,11 +57,6 @@ func PostAnnotation(c *models.ReqContext, cmd dtos.PostAnnotationsCmd) Response 
 
 	repo := annotations.GetRepository()
 
-	if cmd.Text == "" {
-		err := &CreateAnnotationError{"text field should not be empty"}
-		return Error(500, "Failed to save annotation", err)
-	}
-
 	item := annotations.Item{
 		OrgId:       c.OrgId,
 		UserId:      c.UserId,
